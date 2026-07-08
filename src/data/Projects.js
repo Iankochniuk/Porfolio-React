@@ -8,8 +8,8 @@ const projects = [
     video: gestorAutosVideo,
     descripcion: "...",
     tecnologias: ["React", "Tailwind"],
-    github: "...",
-    demo: "...",
+    github: "https://github.com/Iankochniuk/Miniapp-con-Tem-tica",
+    demo: "gestorlubri.netlify.app",
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ const projects = [
     video: f1_dashboard,
     descripcion: "...",
     tecnologias: ["React"],
-    github: "...",
-    demo: "...",
+    github: "https://github.com/Iankochniuk/F1--Dashboard",
+    demo: "f1-dashboar.netlify.app",
   },
 ];
 

@@ -21,7 +21,7 @@ function Hero() {
         Frontend Developer
       </h2>
 
-      <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+      <p className="text-lg md:text-xl text-slate-400 max-w-2xl">
         Desarrollador Frontend especializado en React y apasionado por crear
         aplicaciones modernas, rápidas y con una excelente experiencia de
         usuario.
