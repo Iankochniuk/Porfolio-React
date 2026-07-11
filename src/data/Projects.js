@@ -9,7 +9,7 @@ const projects = [
     descripcion: "...",
     tecnologias: ["React", "Tailwind"],
     github: "https://github.com/Iankochniuk/Miniapp-con-Tem-tica",
-    demo: "gestorlubri.netlify.app",
+    demo: "https://gestorlubri.netlify.app/",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const projects = [
     descripcion: "...",
     tecnologias: ["React"],
     github: "https://github.com/Iankochniuk/F1--Dashboard",
-    demo: "f1-dashboar.netlify.app",
+    demo: "https://f1-dashboar.netlify.app/",
   },
 ];
 
