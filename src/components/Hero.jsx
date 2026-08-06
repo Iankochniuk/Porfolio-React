@@ -18,13 +18,14 @@ function Hero() {
       </h1>
 
       <h2 className="text-2xl md:text-4xl text-slate-300 mb-4">
-        Frontend Developer
+        Full Stack Developer
       </h2>
 
       <p className="text-lg md:text-xl text-slate-400 max-w-2xl">
-        Desarrollador Frontend especializado en React y apasionado por crear
-        aplicaciones modernas, rápidas y con una excelente experiencia de
-        usuario.
+        Soy desarrollador Full Stack Junior especializado en React.js,
+        JavaScript, Node.js, Express, HTML, CSS, Tailwind CSS y consumo de APIs
+        REST. Me apasiona transformar ideas en aplicaciones rápidas, accesibles
+        y bien estructuradas.
       </p>
 
       <div className="flex flex-col md:flex-row gap-4 mt-8">
@@ -49,8 +50,8 @@ function Hero() {
         </Link>
 
         <a
-          href="../src/public/CV-ianKochniuk.pdf"
-          download
+          href="/CV-iankochniuk.pdf"
+          download="CV-iankochniuk.pdf"
           className="border border-cyan-500 hover:bg-cyan-500 px-6 py-3 rounded-lg font-semibold cursor-pointer transition"
         >
           Descargar CV
