@@ -1,4 +1,5 @@
 import {
+  FaWordpress,
   FaHtml5,
   FaCss3Alt,
   FaReact,
@@ -48,6 +49,11 @@ const skills = [
     id: 8,
     nombre: "Godot",
     icono: SiGodotengine,
+  },
+  {
+    id: 9,
+    nombre: "WordPress",
+    icono: FaWordpress,
   },
 ];
 
