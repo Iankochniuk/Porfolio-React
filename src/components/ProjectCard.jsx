@@ -1,56 +1,74 @@
+import { motion } from "framer-motion";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+
 function ProjectCard({ proyecto }) {
   return (
-    <div
-      className="bg-slate-800 rounded-xl overflow-hidden shadow-lg
-hover:-translate-y-3 hover:shadow-2xl
-transition-all duration-300"
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      whileHover={{ y: -8 }}
+      className="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm transition-all duration-300 hover:border-zinc-600"
     >
-      <video
-        src={proyecto.video}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105"
-      />
+      {/* VIDEO */}
+      <div className="overflow-hidden">
+        <motion.video
+          src={proyecto.video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          whileHover={{ scale: 1.04 }}
+          transition={{ duration: 0.5 }}
+          className="h-64 w-full object-cover"
+        />
+      </div>
 
-      <div className="p-6">
-        <h3 className="text-2xl font-bold mb-3">{proyecto.titulo}</h3>
+      {/* CONTENIDO */}
+      <div className="p-8">
+        <h3 className="text-2xl font-bold text-white">{proyecto.titulo}</h3>
 
-        <p className="text-gray-300 mb-4">{proyecto.descripcion}</p>
+        <p className="mt-4 leading-7 text-zinc-400">{proyecto.descripcion}</p>
 
-        <div className="flex flex-wrap gap-2 my-4">
-          {proyecto.tecnologias.map((tecnologia) => (
+        {/* Tecnologías */}
+        <div className="mt-6 flex flex-wrap gap-3">
+          {proyecto.tecnologias.map((tech) => (
             <span
-              key={tecnologia}
-              className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm"
+              key={tech}
+              className="rounded-full border border-zinc-700 px-3 py-1 text-sm text-zinc-300 transition group-hover:border-zinc-500"
             >
-              {tecnologia}
+              {tech}
             </span>
           ))}
         </div>
 
-        <div className="flex gap-4">
-          <a
+        {/* Botones */}
+        <div className="mt-8 flex items-center gap-6">
+          <motion.a
+            whileHover={{ x: 5 }}
             href={proyecto.github}
             target="_blank"
             rel="noreferrer"
-            className="bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded-lg transition"
+            className="flex items-center gap-2 text-zinc-300 transition hover:text-white"
           >
+            <FiGithub />
             GitHub
-          </a>
+          </motion.a>
 
-          <a
+          <motion.a
+            whileHover={{ x: 5 }}
             href={proyecto.demo}
             target="_blank"
             rel="noreferrer"
-            className="border border-cyan-500 hover:bg-cyan-500 px-4 py-2 rounded-lg transition"
+            className="flex items-center gap-2 text-white"
           >
-            Demo
-          </a>
+            Ver proyecto
+            <FiArrowUpRight />
+          </motion.a>
         </div>
       </div>
-    </div>
+    </motion.article>
   );
 }
 
